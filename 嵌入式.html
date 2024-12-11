@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>衣物乾燥時間</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('') no-repeat center center fixed;
+            background-size: 100vw 100vh; /* Ensures the image covers the entire screen */
+            color: #333;
+            transition: background 0.5s ease;
+        }
+
+        header {
+            background: rgba(0, 123, 255, 0.8);
+            color: white;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .dry-time {
+            font-size: 1.8em;
+            margin: 20px 0;
+            color: #007BFF;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+    </style>
+    <script>
+        function updateDryingStatus() {
+            const dryTimeDiv = document.querySelector('.dry-time');
+            document.body.style.backgroundImage = "url('your-new-chino-image.jpg')";
+            document.body.style.backgroundSize = "100vw 100vh"; // Ensures the new background covers the screen
+            dryTimeDiv.textContent = "衣服已經晾好了！";
+            dryTimeDiv.style.color = "#28a745"; // Change to green to indicate completion
+        }
+
+        // Simulate drying completion after 5 seconds (for demo purposes)
+        setTimeout(updateDryingStatus, 5000);
+    </script>
+</head>
+<body>
+    <header>
+        <h1>衣物乾燥時間預測</h1>
+    </header>
+    <div class="container">
+        <p>此區域將顯示衣物預計乾燥的時間。</p>
+        <div class="dry-time">乾燥時間計算中...</div>
+    </div>
+</body>
+</html>
